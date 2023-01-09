@@ -48,13 +48,19 @@
   background-color:#1859c9db;
 }
 
-.main-content {
+.wrapper_main-content {
   display: flex;
   flex-direction: column;
   justify-content:center;
   align-items: center;
-  flex: 1 0 auto;
+  flex-grow: 1;
   background-color: rgb(91, 157, 244);
+}
+
+.main-content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 720px;
 }
 
 .main-content_address-cards {
@@ -62,7 +68,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: -20vh 0 0 0;
 }
 
 .card-1 {
@@ -126,7 +131,6 @@
 .wrapper_footer {
   display: flex;
   height: 100px;
-  margin-top: -100px;
   flex: 0 0 auto;
   color: aliceblue;
   background-color: black;
