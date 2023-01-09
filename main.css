@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper_header {
+  display: flex;
+  height: 100px;
+  background-color: green;
+}
+
+.header_logo {
+  background-color: aqua;
+  flex: 1;
+}
+
+.header_center {
+  flex: 2;
+  background-color: rgb(114, 212, 143);
+}
+
+.header_userbar {
+  background-color: rgb(68, 0, 255);
+  flex: 1;
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+  padding: 0 10px;
+}
+
+.header_userbar_login-button {
+  width: 100px;
+  height:30px;
+  border:none;
+  border-radius:5px;
+  color:#fff;
+  background-color:#1859c9;
+  cursor:pointer;
+}
+
+.header_userbar_login-button:hover {
+  background-color:#1859c9db;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  flex: 1 0 auto;
+  background-color: rgb(91, 157, 244);
+}
+
+.main-content_address-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -20vh 0 0 0;
+}
+
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 150px;
+  margin: 5px 10px 5px 15%;
+  border-radius: 7px;
+  background-color: yellow;
+}
+
+.card-text {
+  margin: 15px 0 0 0;
+}
+
+.house_img {
+  margin: 0 0 15px 0;
+  border-radius: 10%;
+}
+
+.card-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 150px;
+  margin: 5px 15% 5px 5px;
+  border-radius: 7px;
+  text-align: center;
+  background-color: yellow;
+}
+
+.new-address_img {
+  margin: 0 0 15px 0;
+  border-radius: 10%;
+}
+
+.main-content_calculate-card {
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main-content__calculate-card_button {
+  flex: 1;
+  margin: 5px 15%;
+  height: 50px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+}
+
+.wrapper_footer {
+  display: flex;
+  height: 100px;
+  margin-top: -100px;
+  flex: 0 0 auto;
+  color: aliceblue;
+  background-color: black;
+}
+
+.footer_contacts {
+  flex: 1 1 0;
+  height: 100px;
+  background-color: rgb(208, 43, 43);
+}
+
+.footer_social {
+  flex: 1 1 0;
+  height: 100px;
+  background-color: rgb(222, 134, 134);
+}
+
+.footer_feedback {
+  flex: 1 1 0;
+  height: 100px;
+  background-color: rgb(237, 181, 181);
+} 
