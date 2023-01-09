@@ -137,19 +137,23 @@
 }
 
 .footer_contacts {
-  flex: 1 1 0;
+  flex: 1;
   height: 100px;
   background-color: rgb(208, 43, 43);
 }
 
 .footer_social {
-  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
   height: 100px;
   background-color: rgb(222, 134, 134);
 }
 
 .footer_feedback {
-  flex: 1 1 0;
+  flex: 1;
   height: 100px;
   background-color: rgb(237, 181, 181);
 } 
