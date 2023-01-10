@@ -16,8 +16,8 @@
 }
 
 .header_logo {
+  width: 800px;
   background-color: aqua;
-  flex: 1;
 }
 
 .header_center {
