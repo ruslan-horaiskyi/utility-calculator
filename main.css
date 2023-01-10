@@ -16,7 +16,7 @@
 }
 
 .header_logo {
-  width: 800px;
+  width: max-content;
   background-color: aqua;
 }
 
