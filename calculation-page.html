@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utility Calculator</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="wrapper_header">
+        <div class="header_logo">
+          <div><img class="logo_img" src="/img/200x100.svg" alt="logo" /></div>
+        </div>
+        <div class="header_center"></div>
+        <div class="header_userbar">
+          <button class="header_userbar_login-button">login</button>
+        </div>
+      </div>
+      <div class="wrapper_main-content">
+        <div class="calculation-area">
+          <div class="main-content__calculation-area__costs utilities">
+            <p>Вкажіть вартість послуг:</p>
+            <p>
+              <span>Вода, за м&#179;:</span><input type="number"><span>грн.</span>
+              <span>Електроенергія, за кВт:</span><input type="number"><span>грн.</span>
+              <span>Газ, за м&#179:</span><input type="number"><span>грн.</span>
+            </p>
+            <p>Додаткові послуги:</p>
+            <p>
+              <span>Доставка газу:</span><input type="number"><span>грн.</span>
+            </p>
+          </div>
+          <div
+            class="main-content__calculation-area__water-indicators utilities"
+          >
+          <p>Показники води</p>
+            <form oninput="result.value=current-water.value-previous-water.value">
+              <span>Попередні, м&#179;:</span><input type="number" id="previous-water" name="previous-water" value="0">
+              <span>Поточні, м&#179;:</span><input type="number" id="current-water" name="current-water" value="0">
+              <span>Різниця, м&#179;:</span><output name="result" for="previous-water current-water">0</output>
+              <span>До сплати:</span><output name="result" for="previous-water current-water">0 грн.</output>
+            </form>
+          </div>
+          <div
+            class="main-content__calculation-area__electricity-indicators utilities"
+          >
+          <p>Показники електроенергії</p>
+          <form oninput="result.value=current-electricity.value-previous-electricity.value">
+            <span>Попередні, кВт:</span><input type="number" id="previous-electricity" name="previous-electricity" value="0">
+            <span>Поточні, кВт:</span><input type="number" id="current-electricity" name="current-electricity" value="0">
+            <span>Різниця, кВт:</span><output name="result" for="previous-electricity current-electricity">0</output>
+            <span>До сплати:</span><output name="result" for="previous-electricity current-electricity">0 грн.</output>
+          </form>
+          </div>
+          <div class="main-content__calculation-area__gas-indicators utilities">
+            <p>Показники газу</p>
+          <form oninput="result.value=current-gas.value-previous-gas.value">
+            <span>Попередні, м&#179;:</span><input type="number" id="previous-gas" name="previous-gas" value="0">
+            <span>Поточні, м&#179;:</span><input type="number" id="current-gas" name="current-gas" value="0">
+            <span>Різниця, м&#179;</span><output name="result" for="previous-gas current-gas">0</output>
+            <span>До сплати:</span><output name="result" for="previous-gas current-gas">0 грн.</output>
+          </form>
+          </div>
+          <div class="main-content__calculation-area__total-payment utilities">
+            <form id="total-payment_costs" oninput="">
+              <span>Загалом до сплати:<output name="result" for="">0 грн.</output></span>
+              <button id="save-calculation_button">Зберегти розрахунки</button>
+            </form>
+            
+          </div>
+          <div
+            class="main-content__calculation-area__history-of-indicators utilities"
+          >
+            <p>1</p>
+            <p>1</p>
+            <p>history-of-indicators</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+            <p>1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper_footer">
+        <div class="footer_contacts"><span>contacts</span></div>
+        <div class="footer_social">
+          <span>social buttons</span>
+          <div class="current-year_div">
+            &copy; <span id="current-year"></span>
+          </div>
+        </div>
+        <div class="footer_feedback"><span>feedback section</span></div>
+      </div>
+    </div>
+  </body>
+</html>
