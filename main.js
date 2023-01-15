@@ -11,37 +11,37 @@ const myAddress     = document.querySelector('.my-address-div'),
 const calculateButton = document.querySelector('.main-content__calculate-card_button');
 
 // Utilities price
-const waterCost       = document.querySelector('#water_cost'),
-      electricityCost = document.querySelector('#electricity_cost'),
-      gasCost         = document.querySelector('#gas_cost'),
-      gasDelivery     = document.querySelector('#gas_delivery');
+const waterCost       = document.getElementById('water_cost'),
+      electricityCost = document.getElementById('electricity_cost'),
+      gasCost         = document.getElementById('gas_cost'),
+      gasDelivery     = document.getElementById('gas_delivery');
 
 // Water indicators
-const previousWater   = document.querySelector('#previous_water'),
-      currentWater    = document.querySelector('#current_water'),
-      waterDifference = document.querySelector('#water_difference'),
-      waterToPaid     = document.querySelector('#water_toPaid');
+const previousWater   = document.getElementById('previous_water'),
+      currentWater    = document.getElementById('current_water'),
+      waterDifference = document.getElementById('water_difference'),
+      watertoPay     = document.getElementById('water_toPay');
 
 // Electricity indicators
-const previousElectricity   = document.querySelector('#previous_electricity'),
-      currentElectricity    = document.querySelector('#current_electricity'),
-      electricityDifference = document.querySelector('#electricity_difference'),
-      electricityToPaid     = document.querySelector('#electricity_toPaid');
+const previousElectricity   = document.getElementById('previous_electricity'),
+      currentElectricity    = document.getElementById('current_electricity'),
+      electricityDifference = document.getElementById('electricity_difference'),
+      electricitytoPay     = document.getElementById('electricity_toPay');
 
 // Gas indicators
-const previousGas   = document.querySelector('#previous_gas'),
-      currentGas    = document.querySelector('#current_gas'),
-      gasDifference = document.querySelector('#gas_difference'),
-      gasToPaid     = document.querySelector('#gas_toPaid');
+const previousGas   = document.getElementById('previous_gas'),
+      currentGas    = document.getElementById('current_gas'),
+      gasDifference = document.getElementById('gas_difference'),
+      gastoPay     = document.getElementById('gas_toPay');
 
 // Total to paid and save calculation button
-const totalToPaid     = document.querySelector('#total_toPaid'),
-      saveCalculation = document.querySelector('#save_calculation');
+const totaltoPay     = document.getElementById('total_toPay'),
+      saveCalculation = document.getElementById('save_calculation');
 
 // History of indicators
 const historyOfIndicators = document.querySelector('.history_of_indicators_div')
 
 // Copyright
-const year = document.querySelector("#current_year");
+const year = document.getElementById("current_year");
 
 year.innerHTML = new Date().getFullYear();
