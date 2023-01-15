@@ -20,22 +20,23 @@ const waterCost       = document.getElementById('water_cost'),
 const previousWater   = document.getElementById('previous_water'),
       currentWater    = document.getElementById('current_water'),
       waterDifference = document.getElementById('water_difference'),
-      watertoPay     = document.getElementById('water_toPay');
+      waterToPay      = document.getElementById('water_toPay'),
+      waterCostText   = document.querySelector('.water_cost_text');
 
 // Electricity indicators
 const previousElectricity   = document.getElementById('previous_electricity'),
       currentElectricity    = document.getElementById('current_electricity'),
       electricityDifference = document.getElementById('electricity_difference'),
-      electricitytoPay     = document.getElementById('electricity_toPay');
+      electricityToPay      = document.getElementById('electricity_toPay');
 
 // Gas indicators
 const previousGas   = document.getElementById('previous_gas'),
       currentGas    = document.getElementById('current_gas'),
       gasDifference = document.getElementById('gas_difference'),
-      gastoPay     = document.getElementById('gas_toPay');
+      gasToPay      = document.getElementById('gas_toPay');
 
 // Total to paid and save calculation button
-const totaltoPay     = document.getElementById('total_toPay'),
+const totalToPay      = document.getElementById('total_toPay'),
       saveCalculation = document.getElementById('save_calculation');
 
 // History of indicators

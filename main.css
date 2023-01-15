@@ -46,49 +46,57 @@
 .wrapper_main-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
   background-color: rgb(91, 157, 244);
 }
 
 .main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
   margin: 0 auto;
   width: 100%;
   max-width: 1024px;
 }
 
 .calculation-area {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  width: 100%;
+  max-width: 1024px;
   background-color: #b0264b;
+}
+
+.calculation_form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .utilities {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 100%;
+  flex-grow: 1;
   background-color: #ffffff;
 }
 
 .main-content__calculation-area__costs {
-  flex: 1;
   border-bottom: 1px #9ba0a8 solid;
 }
 
 .main-content__calculation-area__water-indicators {
-  flex: 1;
   border-bottom: 1px #8ed9ec solid;
 }
 
 .main-content__calculation-area__electricity-indicators {
-  flex: 1;
   border-bottom: 1px #b66634 solid;
 }
 
 .main-content__calculation-area__gas-indicators {
-  flex: 1;
   border-bottom: 1px #3e4cea solid;
 }
 
@@ -97,7 +105,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: 50px;
+
   border-bottom: 1px #9ba0a8 solid;
 }
 
@@ -115,9 +123,10 @@
 }
 
 .history_of_indicators_div {
-  justify-content: flex-start;
-  max-height: 150px;
-  overflow:scroll;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: scroll;
 }
 
 .main-content_address-cards {
