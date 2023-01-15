@@ -16,45 +16,108 @@
 }
 
 .header_logo {
+  width: max-content;
   background-color: aqua;
-  flex: 1;
-}
-
-.header_center {
-  flex: 2;
-  background-color: rgb(114, 212, 143);
 }
 
 .header_userbar {
   background-color: rgb(68, 0, 255);
   flex: 1;
-  display:flex;
-  justify-content:flex-end;
-  align-items:flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   padding: 0 10px;
 }
 
-.header_userbar_login-button {
+.login_button {
   width: 100px;
-  height:30px;
-  border:none;
-  border-radius:5px;
-  color:#fff;
-  background-color:#1859c9;
-  cursor:pointer;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #1859c9;
+  cursor: pointer;
 }
 
 .header_userbar_login-button:hover {
-  background-color:#1859c9db;
+  background-color: #1859c9db;
+}
+
+.wrapper_main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: rgb(91, 157, 244);
 }
 
 .main-content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.calculation-area {
+  width: 100%;
+  flex-grow: 1;
+  background-color: #b0264b;
+}
+
+.utilities {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.main-content__calculation-area__costs {
+  flex: 1;
+  border-bottom: 1px #9ba0a8 solid;
+}
+
+.main-content__calculation-area__water-indicators {
+  flex: 1;
+  border-bottom: 1px #8ed9ec solid;
+}
+
+.main-content__calculation-area__electricity-indicators {
+  flex: 1;
+  border-bottom: 1px #b66634 solid;
+}
+
+.main-content__calculation-area__gas-indicators {
+  flex: 1;
+  border-bottom: 1px #3e4cea solid;
+}
+
+.main-content__calculation-area__total-payment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  flex: 1 0 auto;
-  background-color: rgb(91, 157, 244);
+  min-height: 50px;
+  border-bottom: 1px #9ba0a8 solid;
+}
+
+#total-payment_costs {
+  width: 100%;
+  display: flex;
+  justify-content:space-between ;
+}
+
+#save_calculation_button {
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px 0 0;
+}
+
+.history_of_indicators_div {
+  justify-content: flex-start;
+  max-height: 150px;
+  overflow:scroll;
 }
 
 .main-content_address-cards {
@@ -62,10 +125,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: -20vh 0 0 0;
 }
 
-.card-1 {
+.my-address-div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -86,7 +148,7 @@
   border-radius: 10%;
 }
 
-.card-2 {
+.new-address-div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -104,9 +166,8 @@
   border-radius: 10%;
 }
 
-.main-content_calculate-card {
+.main-content_calculate-div {
   width: 100%;
-  margin: 5px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -126,26 +187,29 @@
 .wrapper_footer {
   display: flex;
   height: 100px;
-  margin-top: -100px;
   flex: 0 0 auto;
   color: aliceblue;
   background-color: black;
 }
 
 .footer_contacts {
-  flex: 1 1 0;
+  flex: 1;
   height: 100px;
   background-color: rgb(208, 43, 43);
 }
 
 .footer_social {
-  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
   height: 100px;
   background-color: rgb(222, 134, 134);
 }
 
 .footer_feedback {
-  flex: 1 1 0;
+  flex: 1;
   height: 100px;
   background-color: rgb(237, 181, 181);
-} 
+}
