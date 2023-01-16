@@ -18,74 +18,186 @@
           <button class="login_button">login</button>
         </div>
       </div>
-      <div class="wrapper_main-content">
+      <div class="wrapper__main_content">
         <div class="calculation-area">
           <form class="calculation_form">
-            <div class="main-content__calculation-area__costs utilities">
-              Вкажіть вартість послуг:
-              
-                <label>Вода, за <sup>3</sup>:<input type="number" min="0" id="water_cost" class="input" value="0">грн.</label>
-                <label>Електроенергія, за кВт:<input type="number" id="electricity_cost" class="input" value="0">грн.</label>
-                <label>Газ, за м&#179:<input type="number" id="gas_cost" class="input" value="0">грн.</label>
-              
-              Додаткові послуги:
-              
-                <label>Доставка газу:<input type="number" id="gas_delivery" class="input" value="0">грн.</label>
-              
+            <div class="calculation_form__costs utilities">
+              <fieldset class="costs_fieldset">
+                <legend class="costs_legend">Вкажіть вартість послуг:</legend>
+                <div>
+                  <label
+                    >Вода, за м<sup>3</sup>:<input
+                      type="number"
+                      id="water_cost"
+                      class="input"
+                      value="0"
+                      min="0"
+                    />грн.</label
+                  >
+                  <label
+                    >Електроенергія, за кВт:<input
+                      type="number"
+                      id="electricity_cost"
+                      class="input"
+                      value="0"
+                      min="0"
+                    />грн.</label
+                  >
+                  <label
+                    >Газ, за м<sup>3</sup>:<input
+                      type="number"
+                      id="gas_cost"
+                      class="input"
+                      value="0"
+                      min="0"
+                    />грн.</label
+                  >
+                </div>
+                <div>Додаткові послуги:</div>
+                <div class="additional_services__div">
+                  <label
+                    >Доставка газу:<input
+                      type="number"
+                      id="gas_delivery"
+                      class="input"
+                      value="0"
+                      min="0"
+                    />грн.</label
+                  >
+                </div>
+              </fieldset>
             </div>
-            <div
-              class="main-content__calculation-area__water-indicators utilities"
-            >
-              Показники води
-              
-              <label>Попередні, м&#179;:<input type="number" id="previous_water" name="previous_water" value="0"></label>
-              <label>Поточні, м&#179;:<input type="number" id="current_water" name="current_water" value="0"></label>
-              <label>Різниця, м&#179;:<output id="water_difference" name="result" for="previous_water current_water"></output></label>
-              <label>До сплати:<output id="water_toPay" name="result" for="previous_water current_water">0 грн.</output></label>
-              
+
+            <div class="calculation_form__water_indicators utilities">
+              <fieldset class="utilities_fieldset">
+                <legend class="water_indicators_legend">Показники води:</legend>
+                <label
+                  >Попередні, м<sup>3</sup>:<input
+                    type="number"
+                    id="previous_water"
+                    name="previous_water"
+                    value="0"
+                    min="0"
+                /></label>
+                <label
+                  >Поточні, м<sup>3</sup>:<input
+                    type="number"
+                    id="current_water"
+                    name="current_water"
+                    value="0"
+                    min="0"
+                /></label>
+                <label
+                  >Різниця, м<sup>3</sup>:<output
+                    id="water_difference"
+                    name="result"
+                    for="previous_water current_water"
+                    >0 грн.</output
+                  ></label
+                >
+                <label
+                  >До сплати:<output
+                    id="water_toPay"
+                    name="result"
+                    for="previous_water current_water"
+                    >0 грн.</output
+                  ></label
+                >
+              </fieldset>
             </div>
-            <div
-              class="main-content__calculation-area__electricity-indicators utilities"
-            >
-              Показники електроенергії
-              
-              <label>Попередні, кВт:<input type="number" id="previous_electricity" name="previous_electricity" value="0"></label>
-              <label>Поточні, кВт:<input type="number" id="current_electricity" name="current_electricity" value="0"></label>
-              <label>Різниця, кВт:<output id="electricity_difference" name="result" for="previous_electricity current_electricity">0</output></label>
-              <label>До сплати:<output id="electricity_toPay" name="result" for="previous_electricity current_electricity">0 грн.</output></label>
-              
+
+            <div class="calculation_form__electricity_indicators utilities">
+              <fieldset class="utilities_fieldset">
+                <legend class="electricity_indicators_legend">
+                  Показники електроенергії:
+                </legend>
+                <label
+                  >Попередні, кВт:<input
+                    type="number"
+                    id="previous_electricity"
+                    name="previous_electricity"
+                    value="0"
+                    min="0"
+                /></label>
+                <label
+                  >Поточні, кВт:<input
+                    type="number"
+                    id="current_electricity"
+                    name="current_electricity"
+                    value="0"
+                    min="0"
+                /></label>
+                <label
+                  >Різниця, кВт:<output
+                    id="electricity_difference"
+                    name="result"
+                    for="previous_electricity current_electricity"
+                    >0</output
+                  ></label
+                >
+                <label
+                  >До сплати:<output
+                    id="electricity_toPay"
+                    name="result"
+                    for="previous_electricity current_electricity"
+                    >0 грн.</output
+                  ></label
+                >
+              </fieldset>
             </div>
-            <div class="main-content__calculation-area__gas-indicators utilities">
-              Показники газу
-              
-              <label>Попередні, м&#179;:<input type="number" id="previous_gas" name="previous_gas" value="0"></label>
-              <label>Поточні, м&#179;:<input type="number" id="current_gas" name="current_gas" value="0"></label>
-              <label>Різниця, м&#179;<output id="gas_difference" name="result" for="previous_gas current_gas">0</output></label>
-              <label>До сплати:<output id="gas_toPay" name="result" for="previous_gas current_gas">0 грн.</output></label>
-              
+
+            <div class="calculation_form__gas_indicators utilities">
+              <fieldset class="utilities_fieldset">
+                <legend class="gas_indicators_legend">Показники газу:</legend>
+                <label
+                  >Попередні, м<sup>3</sup>:<input
+                    type="number"
+                    id="previous_gas"
+                    name="previous_gas"
+                    value="0"
+                    min="0"
+                /></label>
+                <label
+                  >Поточні, м<sup>3</sup>:<input
+                    type="number"
+                    id="current_gas"
+                    name="current_gas"
+                    value="0"
+                    min="0"
+                /></label>
+                <label
+                  >Різниця, м<sup>3</sup>:<output
+                    id="gas_difference"
+                    name="result"
+                    for="previous_gas current_gas"
+                    >0</output
+                  ></label
+                >
+                <label
+                  >До сплати:<output
+                    id="gas_toPay"
+                    name="result"
+                    for="previous_gas current_gas"
+                    >0 грн.</output
+                  ></label
+                >
+              </fieldset>
             </div>
-            <div class="main-content__calculation-area__total-payment utilities">
-              <label>Загалом до сплати:<output id="total_toPay" name="result" for="">0 грн.</output></label>
-              <button id="save_calculation_button" class="button">Зберегти розрахунки</button>
+
+            <div class="calculation_form__total_payment utilities">
+              <label
+                >Загалом до сплати:<output id="total_toPay" name="result" for=""
+                  >0 грн.</output
+                ></label
+              >
+              <button id="save_calculation_button" class="button">
+                Зберегти розрахунки
+              </button>
             </div>
           </form>
-          <div
-            class="history_of_indicators_div utilities"
-          >
-            1
-            1
-            history-of-indicators
-            1
-            1
-            1
-            1
-            1
-            1
-            1
-            1
-            1
-            1
-            1
+
+          <div class="history_of_indicators utilities">
+            <div>history-of-indicators</div>
           </div>
         </div>
       </div>
@@ -94,7 +206,7 @@
         <div class="footer_contacts"><span>contacts</span></div>
         <div class="footer_social">
           <span>social buttons</span>
-          <div class="current-year_div">
+          <div class="current_year_div">
             &copy; <span id="current_year"></span>
           </div>
         </div>

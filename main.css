@@ -43,7 +43,7 @@
   background-color: #1859c9db;
 }
 
-.wrapper_main-content {
+.wrapper__main_content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -77,35 +77,47 @@
   flex-grow: 1;
 }
 
-.utilities {
+.costs_fieldset {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.utilities_fieldset {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.utilities {
+  display: flex;
+  align-items: stretch;
   flex-grow: 1;
   background-color: #ffffff;
 }
 
-.main-content__calculation-area__costs {
+.calculation_form__costs {
   border-bottom: 1px #9ba0a8 solid;
 }
 
-.main-content__calculation-area__water-indicators {
+.calculation_form__water_indicators {
   border-bottom: 1px #8ed9ec solid;
 }
 
-.main-content__calculation-area__electricity-indicators {
+.calculation_form__electricity_indicators {
   border-bottom: 1px #b66634 solid;
 }
 
-.main-content__calculation-area__gas-indicators {
+.calculation_form__gas_indicators {
   border-bottom: 1px #3e4cea solid;
 }
 
-.main-content__calculation-area__total-payment {
+.calculation_form__total_payment {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   border-bottom: 1px #9ba0a8 solid;
 }
 
@@ -122,11 +134,13 @@
   margin: 0 10px 0 0;
 }
 
-.history_of_indicators_div {
+.history_of_indicators {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  overflow: scroll;
+  overflow-y: auto;
+  max-height: 250px;
+  width: 100%;
 }
 
 .main-content_address-cards {
