@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper_header {
+  display: flex;
+  height: 100px;
+  background-color: green;
+}
+
+.header_logo {
+  width: max-content;
+  background-color: aqua;
+}
+
+.header_userbar {
+  background-color: rgb(68, 0, 255);
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 10px;
+}
+
+.login_button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #1859c9;
+  cursor: pointer;
+}
+
+.header_userbar_login_button:hover {
+  background-color: #1859c9db;
+}
+
+.wrapper_footer {
+  display: flex;
+  height: 100px;
+  flex: 0 0 auto;
+  color: aliceblue;
+  background-color: black;
+}
+
+.footer_contacts {
+  flex: 1;
+  height: 100px;
+  background-color: rgb(208, 43, 43);
+}
+
+.footer_social {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  background-color: rgb(222, 134, 134);
+}
+
+.footer_feedback {
+  flex: 1;
+  height: 100px;
+  background-color: rgb(237, 181, 181);
+}

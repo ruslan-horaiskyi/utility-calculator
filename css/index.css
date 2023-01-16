@@ -1,0 +1,81 @@
+.wrapper__main_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  background-color: rgb(91, 157, 244);
+}
+
+.main_content__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.main_content__address_cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my_address__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 150px;
+  margin: 5px 10px 5px 15%;
+  border-radius: 7px;
+  background-color: yellow;
+}
+
+.card_text {
+  margin: 15px 0 0 0;
+}
+
+.house_img {
+  margin: 0 0 15px 0;
+  border-radius: 10%;
+}
+
+.new_address__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 150px;
+  margin: 5px 15% 5px 5px;
+  border-radius: 7px;
+  text-align: center;
+  background-color: yellow;
+}
+
+.new_address__img {
+  margin: 0 0 15px 0;
+  border-radius: 10%;
+}
+
+/* .main_content__calculate_card__div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
+
+.calculate_card__button {
+  margin: 5px 15%;
+  height: 50px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+}
