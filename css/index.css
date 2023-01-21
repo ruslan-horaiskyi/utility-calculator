@@ -37,11 +37,11 @@
 }
 
 .card_text {
-  margin: 15px 0 0 0;
+  margin-top: 15px;
 }
 
 .house_img {
-  margin: 0 0 15px 0;
+  margin-bottom: 15px;
   border-radius: 10%;
 }
 
@@ -59,16 +59,9 @@
 }
 
 .new_address__img {
-  margin: 0 0 15px 0;
+  margin-bottom: 15px;
   border-radius: 10%;
 }
-
-/* .main_content__calculate_card__div {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
 
 .calculate_card__button {
   margin: 5px 15%;
