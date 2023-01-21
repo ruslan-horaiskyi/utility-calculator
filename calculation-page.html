@@ -31,8 +31,8 @@
                       type="number"
                       id="water_cost"
                       class="input"
-                      value="0"
                       min="0"
+                      placeholder="Вода"
                     />грн.</label
                   >
                   <label
@@ -40,7 +40,7 @@
                       type="number"
                       id="electricity_cost"
                       class="input"
-                      value="0"
+                      placeholder="Електроенергія"
                       min="0"
                     />грн.</label
                   >
@@ -49,7 +49,7 @@
                       type="number"
                       id="gas_cost"
                       class="input"
-                      value="0"
+                      placeholder="Газ"
                       min="0"
                     />грн.</label
                   >
@@ -61,7 +61,7 @@
                       type="number"
                       id="gas_delivery"
                       class="input"
-                      value="0"
+                      placeholder="Вартість послуги"
                       min="0"
                     />грн.</label
                   >
@@ -77,7 +77,7 @@
                     type="number"
                     id="previous_water"
                     name="previous_water"
-                    value="0"
+                    placeholder="000000"
                     min="0"
                 /></label>
                 <label
@@ -85,22 +85,18 @@
                     type="number"
                     id="current_water"
                     name="current_water"
-                    value="0"
+                    placeholder="000000"
                     min="0"
                 /></label>
                 <label
                   >Різниця, м<sup>3</sup>:<output
                     id="water_difference"
-                    name="result"
-                    for="previous_water current_water"
                     >0 грн.</output
                   ></label
                 >
                 <label
                   >До сплати:<output
-                    id="water_toPay"
-                    name="result"
-                    for="previous_water current_water"
+                    id="water_to_pay"
                     >0 грн.</output
                   ></label
                 >
@@ -117,7 +113,7 @@
                     type="number"
                     id="previous_electricity"
                     name="previous_electricity"
-                    value="0"
+                    placeholder="000000"
                     min="0"
                 /></label>
                 <label
@@ -125,22 +121,18 @@
                     type="number"
                     id="current_electricity"
                     name="current_electricity"
-                    value="0"
+                    placeholder="000000"
                     min="0"
                 /></label>
                 <label
                   >Різниця, кВт:<output
                     id="electricity_difference"
-                    name="result"
-                    for="previous_electricity current_electricity"
                     >0</output
                   ></label
                 >
                 <label
                   >До сплати:<output
-                    id="electricity_toPay"
-                    name="result"
-                    for="previous_electricity current_electricity"
+                    id="electricity_to_pay"
                     >0 грн.</output
                   ></label
                 >
@@ -155,7 +147,7 @@
                     type="number"
                     id="previous_gas"
                     name="previous_gas"
-                    value="0"
+                    placeholder="000000"
                     min="0"
                 /></label>
                 <label
@@ -163,22 +155,18 @@
                     type="number"
                     id="current_gas"
                     name="current_gas"
-                    value="0"
+                    placeholder="000000"
                     min="0"
                 /></label>
                 <label
                   >Різниця, м<sup>3</sup>:<output
                     id="gas_difference"
-                    name="result"
-                    for="previous_gas current_gas"
                     >0</output
                   ></label
                 >
                 <label
                   >До сплати:<output
-                    id="gas_toPay"
-                    name="result"
-                    for="previous_gas current_gas"
+                    id="gas_to_pay"
                     >0 грн.</output
                   ></label
                 >
@@ -187,7 +175,7 @@
 
             <div class="calculation_form__total_payment utilities">
               <label
-                >Загалом до сплати:<output id="total_toPay" name="result" for=""
+                >Загалом до сплати:<output id="total_to_pay" name="result" for=""
                   >0 грн.</output
                 ></label
               >
@@ -207,14 +195,14 @@
         <div class="footer_contacts"><span>contacts</span></div>
         <div class="footer_social">
           <span>social buttons</span>
-          <div class="current_year_div">
+          <div class="current_year">
             &copy; <span id="current_year"></span>
           </div>
         </div>
         <div class="footer_feedback"><span>feedback section</span></div>
       </div>
     </div>
-    <script src="./js/main.js" defer></script>
-    <script src="./js/calculation-page.js" defer></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/calculation-page.js"></script>
   </body>
 </html>

@@ -36,6 +36,10 @@
   background-color: #ffffff;
 }
 
+:focus::placeholder {
+  color: transparent;
+}
+
 .utilities_fieldset {
   display: flex;
   align-items: center;
