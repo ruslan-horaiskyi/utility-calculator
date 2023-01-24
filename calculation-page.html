@@ -16,7 +16,7 @@
           <div><img class="logo_img" src="./img/300x100.png" alt="logo" /></div>
         </div>
         <div class="header_userbar">
-          <button class="login_button">login</button>
+          <div class="login_button">login</div>
         </div>
       </div>
       <div class="wrapper__main_content">
@@ -88,17 +88,13 @@
                     placeholder="000000"
                     min="0"
                 /></label>
-                <label
-                  >Різниця, м<sup>3</sup>:<output
-                    id="water_difference"
-                    >0 грн.</output
-                  ></label
+                <label class="utilities_label"
+                  >Різниця, м<sup>3</sup>:
+                  <div id="water_difference">0 грн.</div></label
                 >
-                <label
-                  >До сплати:<output
-                    id="water_to_pay"
-                    >0 грн.</output
-                  ></label
+                <label class="utilities_label"
+                  >До сплати:
+                  <div id="water_to_pay">0 грн.</div></label
                 >
               </fieldset>
             </div>
@@ -124,17 +120,13 @@
                     placeholder="000000"
                     min="0"
                 /></label>
-                <label
-                  >Різниця, кВт:<output
-                    id="electricity_difference"
-                    >0</output
-                  ></label
+                <label class="utilities_label"
+                  >Різниця, кВт:
+                  <div id="electricity_difference">0</div></label
                 >
-                <label
-                  >До сплати:<output
-                    id="electricity_to_pay"
-                    >0 грн.</output
-                  ></label
+                <label class="utilities_label"
+                  >До сплати:
+                  <div id="electricity_to_pay">0 грн.</div></label
                 >
               </fieldset>
             </div>
@@ -158,30 +150,25 @@
                     placeholder="000000"
                     min="0"
                 /></label>
-                <label
-                  >Різниця, м<sup>3</sup>:<output
-                    id="gas_difference"
-                    >0</output
-                  ></label
+                <label class="utilities_label"
+                  >Різниця, м<sup>3</sup>:
+                  <div id="gas_difference">0</div></label
                 >
-                <label
-                  >До сплати:<output
-                    id="gas_to_pay"
-                    >0 грн.</output
-                  ></label
+                <label class="utilities_label"
+                  >До сплати:
+                  <div id="gas_to_pay">0 грн.</div></label
                 >
               </fieldset>
             </div>
 
             <div class="calculation_form__total_payment utilities">
-              <label
-                >Загалом до сплати:<output id="total_to_pay" name="result" for=""
-                  >0 грн.</output
-                ></label
+              <label class="utilities_label"
+                >Загалом до сплати:
+                <div id="total_to_pay" name="result" for="">0 грн.</div></label
               >
-              <button id="save_calculation__button" class="button">
+              <div id="save_calculation__button" class="button">
                 Зберегти розрахунки
-              </button>
+              </div>
             </div>
           </form>
 
@@ -195,9 +182,7 @@
         <div class="footer_contacts"><span>contacts</span></div>
         <div class="footer_social">
           <span>social buttons</span>
-          <div class="current_year">
-            &copy; <span id="current_year"></span>
-          </div>
+          <div class="current_year">&copy; <span id="current_year"></span></div>
         </div>
         <div class="footer_feedback"><span>feedback section</span></div>
       </div>
