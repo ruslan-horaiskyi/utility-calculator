@@ -72,7 +72,7 @@
             <div class="calculation_form__water_indicators utilities">
               <fieldset class="utilities_fieldset">
                 <legend class="water_indicators_legend">Показники води:</legend>
-                <label
+                <label class="utilities_label"
                   >Попередні, м<sup>3</sup>:<input
                     type="number"
                     id="previous_water"
@@ -80,7 +80,7 @@
                     placeholder="000000"
                     min="0"
                 /></label>
-                <label
+                <label class="utilities_label"
                   >Поточні, м<sup>3</sup>:<input
                     type="number"
                     id="current_water"
@@ -90,11 +90,25 @@
                 /></label>
                 <label class="utilities_label"
                   >Різниця, м<sup>3</sup>:
-                  <div id="water_difference">0 грн.</div></label
+                  <div>
+                    <input
+                      type="number"
+                      id="water_difference"
+                      value="0"
+                      readonly
+                    >
+                  </div></label
                 >
                 <label class="utilities_label"
-                  >До сплати:
-                  <div id="water_to_pay">0 грн.</div></label
+                  >До сплати, грн:
+                  <div>
+                    <input
+                      type="number"
+                      id="water_to_pay"
+                      value="0"
+                      readonly
+                    >
+                  </div></label
                 >
               </fieldset>
             </div>
@@ -104,7 +118,7 @@
                 <legend class="electricity_indicators_legend">
                   Показники електроенергії:
                 </legend>
-                <label
+                <label class="utilities_label"
                   >Попередні, кВт:<input
                     type="number"
                     id="previous_electricity"
@@ -112,7 +126,7 @@
                     placeholder="000000"
                     min="0"
                 /></label>
-                <label
+                <label class="utilities_label"
                   >Поточні, кВт:<input
                     type="number"
                     id="current_electricity"
@@ -122,11 +136,25 @@
                 /></label>
                 <label class="utilities_label"
                   >Різниця, кВт:
-                  <div id="electricity_difference">0</div></label
+                  <div>
+                    <input
+                      type="number"
+                      id="electricity_difference"
+                      value="0"
+                      readonly
+                    >
+                  </div></label
                 >
                 <label class="utilities_label"
-                  >До сплати:
-                  <div id="electricity_to_pay">0 грн.</div></label
+                  >До сплати, грн:
+                  <div>
+                    <input
+                      type="number"
+                      id="electricity_to_pay"
+                      value="0"
+                      readonly
+                    >
+                  </div></label
                 >
               </fieldset>
             </div>
@@ -134,7 +162,7 @@
             <div class="calculation_form__gas_indicators utilities">
               <fieldset class="utilities_fieldset">
                 <legend class="gas_indicators_legend">Показники газу:</legend>
-                <label
+                <label class="utilities_label"
                   >Попередні, м<sup>3</sup>:<input
                     type="number"
                     id="previous_gas"
@@ -142,7 +170,7 @@
                     placeholder="000000"
                     min="0"
                 /></label>
-                <label
+                <label class="utilities_label"
                   >Поточні, м<sup>3</sup>:<input
                     type="number"
                     id="current_gas"
@@ -152,19 +180,40 @@
                 /></label>
                 <label class="utilities_label"
                   >Різниця, м<sup>3</sup>:
-                  <div id="gas_difference">0</div></label
+                  <div>
+                    <input
+                      type="number"
+                      id="gas_difference"
+                      value="0"
+                      readonly
+                    >
+                  </div></label
                 >
                 <label class="utilities_label"
-                  >До сплати:
-                  <div id="gas_to_pay">0 грн.</div></label
+                  >До сплати, грн:
+                  <div>
+                    <input
+                      type="number"
+                      id="gas_to_pay"
+                      value="0"
+                      readonly
+                    >
+                  </div></label
                 >
               </fieldset>
             </div>
 
             <div class="calculation_form__total_payment utilities">
               <label class="utilities_label"
-                >Загалом до сплати:
-                <div id="total_to_pay" name="result" for="">0 грн.</div></label
+                >Загалом до сплати, грн:
+                <div>
+                  <input
+                      type="number"
+                      id="total_to_pay"
+                      value="0"
+                      readonly
+                    >
+                </div></label
               >
               <div id="save_calculation__button" class="button">
                 Зберегти розрахунки

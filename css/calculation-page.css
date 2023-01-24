@@ -38,7 +38,7 @@
 
 .utilities_label {
   display: flex;
-  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 :focus::placeholder {
