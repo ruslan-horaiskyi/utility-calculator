@@ -40,6 +40,7 @@ for(let input of inputs) {
       getIndicatorsToPay(electricityToPay, electricityCost);
       getIndicatorsDifference(previousGas, currentGas, gasDifference);
       getIndicatorsToPay(gasToPay, gasCost);
+      getTotalToPayResult();
     });
 }
 
@@ -50,4 +51,8 @@ const getIndicatorsDifference = (previousIndicator, currentIndicator, indicatorD
 
 const getIndicatorsToPay = (indicatorToPay, indicatorCost) => {
   indicatorToPay.value = differenceResult * indicatorCost.value;
+}
+
+const getTotalToPayResult = () => {
+  totalToPay.value = parseInt(waterToPay.value) + parseInt(electricityToPay.value) + parseInt(gasToPay.value);
 }
