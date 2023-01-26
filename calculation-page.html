@@ -27,7 +27,8 @@
                 <legend class="costs_legend">Вкажіть вартість послуг:</legend>
                 <div>
                   <label
-                    >Вода, за м<sup>3</sup>:<input
+                    >Вода, за м<sup>3</sup>:
+                    <input
                       type="number"
                       id="water_cost"
                       class="input"
@@ -36,7 +37,8 @@
                     />грн.</label
                   >
                   <label
-                    >Електроенергія, за кВт:<input
+                    >Електроенергія, за кВт:
+                    <input
                       type="number"
                       id="electricity_cost"
                       class="input"
@@ -45,7 +47,8 @@
                     />грн.</label
                   >
                   <label
-                    >Газ, за м<sup>3</sup>:<input
+                    >Газ, за м<sup>3</sup>:
+                    <input
                       type="number"
                       id="gas_cost"
                       class="input"
@@ -57,7 +60,8 @@
                 <div>Додаткові послуги:</div>
                 <div class="additional_services__div">
                   <label
-                    >Доставка газу:<input
+                    >Доставка газу:
+                    <input
                       type="number"
                       id="gas_delivery"
                       class="input"
@@ -73,7 +77,9 @@
               <fieldset class="utilities_fieldset">
                 <legend class="water_indicators_legend">Показники води:</legend>
                 <label class="utilities_label"
-                  >Попередні, м<sup>3</sup>:<input
+                  >Попередні, м<sup>3</sup>:
+                  <input
+                    class="input"
                     type="number"
                     id="previous_water"
                     name="previous_water"
@@ -81,7 +87,9 @@
                     min="0"
                 /></label>
                 <label class="utilities_label"
-                  >Поточні, м<sup>3</sup>:<input
+                  >Поточні, м<sup>3</sup>:
+                  <input
+                    class="input"
                     type="number"
                     id="current_water"
                     name="current_water"
@@ -92,24 +100,24 @@
                   >Різниця, м<sup>3</sup>:
                   <div>
                     <input
+                      class="input"
                       type="number"
                       id="water_difference"
                       value="0"
                       readonly
-                    >
-                  </div></label
-                >
+                    /></div
+                ></label>
                 <label class="utilities_label"
                   >До сплати, грн:
                   <div>
                     <input
+                      class="input"
                       type="number"
                       id="water_to_pay"
                       value="0"
                       readonly
-                    >
-                  </div></label
-                >
+                    /></div
+                ></label>
               </fieldset>
             </div>
 
@@ -119,7 +127,9 @@
                   Показники електроенергії:
                 </legend>
                 <label class="utilities_label"
-                  >Попередні, кВт:<input
+                  >Попередні, кВт:
+                  <input
+                    class="input"
                     type="number"
                     id="previous_electricity"
                     name="previous_electricity"
@@ -127,7 +137,9 @@
                     min="0"
                 /></label>
                 <label class="utilities_label"
-                  >Поточні, кВт:<input
+                  >Поточні, кВт:
+                  <input
+                    class="input"
                     type="number"
                     id="current_electricity"
                     name="current_electricity"
@@ -138,24 +150,24 @@
                   >Різниця, кВт:
                   <div>
                     <input
+                      class="input"
                       type="number"
                       id="electricity_difference"
                       value="0"
                       readonly
-                    >
-                  </div></label
-                >
+                    /></div
+                ></label>
                 <label class="utilities_label"
                   >До сплати, грн:
                   <div>
                     <input
+                      class="input"
                       type="number"
                       id="electricity_to_pay"
                       value="0"
                       readonly
-                    >
-                  </div></label
-                >
+                    /></div
+                ></label>
               </fieldset>
             </div>
 
@@ -163,7 +175,9 @@
               <fieldset class="utilities_fieldset">
                 <legend class="gas_indicators_legend">Показники газу:</legend>
                 <label class="utilities_label"
-                  >Попередні, м<sup>3</sup>:<input
+                  >Попередні, м<sup>3</sup>:
+                  <input
+                    class="input"
                     type="number"
                     id="previous_gas"
                     name="previous_gas"
@@ -171,7 +185,9 @@
                     min="0"
                 /></label>
                 <label class="utilities_label"
-                  >Поточні, м<sup>3</sup>:<input
+                  >Поточні, м<sup>3</sup>:
+                  <input
+                    class="input"
                     type="number"
                     id="current_gas"
                     name="current_gas"
@@ -182,24 +198,24 @@
                   >Різниця, м<sup>3</sup>:
                   <div>
                     <input
+                      class="input"
                       type="number"
                       id="gas_difference"
                       value="0"
                       readonly
-                    >
-                  </div></label
-                >
+                    /></div
+                ></label>
                 <label class="utilities_label"
                   >До сплати, грн:
                   <div>
                     <input
+                      class="input"
                       type="number"
                       id="gas_to_pay"
                       value="0"
                       readonly
-                    >
-                  </div></label
-                >
+                    /></div
+                ></label>
               </fieldset>
             </div>
 
@@ -208,13 +224,13 @@
                 >Загалом до сплати, грн:
                 <div>
                   <input
-                      type="number"
-                      id="total_to_pay"
-                      value="0"
-                      readonly
-                    >
-                </div></label
-              >
+                    class="input"
+                    type="number"
+                    id="total_to_pay"
+                    value="0"
+                    readonly
+                  /></div
+              ></label>
               <div id="save_calculation__button" class="button">
                 Зберегти розрахунки
               </div>
