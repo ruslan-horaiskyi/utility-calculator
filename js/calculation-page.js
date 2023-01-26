@@ -28,3 +28,26 @@ const totalToPay      = document.getElementById('total_to_pay'),
 
 // History of indicators
 const historyOfIndicators = document.querySelector('.history_of_indicators');
+
+let differenceResult = 0;
+
+const inputs = document.querySelectorAll('.input');
+for(let input of inputs) {
+    input.addEventListener('input', () => {
+      getIndicatorsDifference(previousWater, currentWater, waterDifference);
+      getIndicatorsToPay(waterToPay, waterCost);
+      getIndicatorsDifference(previousElectricity, currentElectricity, electricityDifference);
+      getIndicatorsToPay(electricityToPay, electricityCost);
+      getIndicatorsDifference(previousGas, currentGas, gasDifference);
+      getIndicatorsToPay(gasToPay, gasCost);
+    });
+}
+
+const getIndicatorsDifference = (previousIndicator, currentIndicator, indicatorDifference) => {
+  differenceResult = currentIndicator.value - previousIndicator.value;
+  indicatorDifference.value = differenceResult;
+}
+
+const getIndicatorsToPay = (indicatorToPay, indicatorCost) => {
+  indicatorToPay.value = differenceResult * indicatorCost.value;
+}
