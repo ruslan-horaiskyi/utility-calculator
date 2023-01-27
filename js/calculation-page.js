@@ -35,11 +35,11 @@ const inputs = document.querySelectorAll('.input');
 for(let input of inputs) {
     input.addEventListener('input', () => {
       getIndicatorsDifference(previousWater, currentWater, waterDifference);
-      getIndicatorsToPay(waterToPay, waterCost);
+      setIndicatorsToPay(waterToPay, waterCost);
       getIndicatorsDifference(previousElectricity, currentElectricity, electricityDifference);
-      getIndicatorsToPay(electricityToPay, electricityCost);
+      setIndicatorsToPay(electricityToPay, electricityCost);
       getIndicatorsDifference(previousGas, currentGas, gasDifference);
-      getIndicatorsToPay(gasToPay, gasCost);
+      setIndicatorsToPay(gasToPay, gasCost);
       getTotalToPayResult();
     });
 }
@@ -49,10 +49,10 @@ const getIndicatorsDifference = (previousIndicator, currentIndicator, indicatorD
   indicatorDifference.value = differenceResult;
 }
 
-const getIndicatorsToPay = (indicatorToPay, indicatorCost) => {
+const setIndicatorsToPay = (indicatorToPay, indicatorCost) => {
   indicatorToPay.value = differenceResult * indicatorCost.value;
 }
 
 const getTotalToPayResult = () => {
-  totalToPay.value = parseInt(waterToPay.value) + parseInt(electricityToPay.value) + parseInt(gasToPay.value);
+  totalToPay.value = (parseFloat(waterToPay.value) + parseFloat(electricityToPay.value) + parseFloat(gasToPay.value)).toFixed(2);
 }
