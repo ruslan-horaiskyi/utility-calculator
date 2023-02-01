@@ -31,8 +31,9 @@
                     <input
                       type="number"
                       id="water_cost"
-                      class="input"
+                      class="input cost_input"
                       min="0"
+                      value="0"
                       placeholder="Вода"
                     />грн.</label
                   >
@@ -41,9 +42,10 @@
                     <input
                       type="number"
                       id="electricity_cost"
-                      class="input"
+                      class="input cost_input"
                       placeholder="Електроенергія"
                       min="0"
+                      value="0"
                     />грн.</label
                   >
                   <label
@@ -51,9 +53,10 @@
                     <input
                       type="number"
                       id="gas_cost"
-                      class="input"
+                      class="input cost_input"
                       placeholder="Газ"
                       min="0"
+                      value="0"
                     />грн.</label
                   >
                 </div>
@@ -67,6 +70,7 @@
                       class="input"
                       placeholder="Вартість послуги"
                       min="0"
+                      value="0"
                     />грн.</label
                   >
                 </div>
@@ -79,30 +83,33 @@
                 <label class="utilities_label"
                   >Попередні, м<sup>3</sup>:
                   <input
-                    class="input"
+                    class="input indicator_input"
                     type="number"
                     id="previous_water"
                     name="previous_water"
                     placeholder="000000"
+                    value="0"                
                     min="0"
                 /></label>
                 <label class="utilities_label"
                   >Поточні, м<sup>3</sup>:
                   <input
-                    class="input"
+                    class="input indicator_input"
                     type="number"
                     id="current_water"
                     name="current_water"
                     placeholder="000000"
                     min="0"
+                    value="0"                    
                 /></label>
                 <label class="utilities_label"
                   >Різниця, м<sup>3</sup>:
                   <div>
                     <input
-                      class="input"
-                      type="number"
+                      class="input difference_input"
+                      type="text"
                       id="water_difference"
+                      placeholder="0"
                       value="0"
                       min="0"
                       readonly
@@ -112,7 +119,7 @@
                   >До сплати, грн:
                   <div>
                     <input
-                      class="input"
+                      class="input to_pay__input"
                       type="number"
                       id="water_to_pay"
                       value="0"
@@ -131,30 +138,33 @@
                 <label class="utilities_label"
                   >Попередні, кВт:
                   <input
-                    class="input"
+                    class="input indicator_input"
                     type="number"
                     id="previous_electricity"
                     name="previous_electricity"
                     placeholder="000000"
                     min="0"
+                    value="0"                    
                 /></label>
                 <label class="utilities_label"
                   >Поточні, кВт:
                   <input
-                    class="input"
+                    class="input indicator_input"
                     type="number"
                     id="current_electricity"
                     name="current_electricity"
                     placeholder="000000"
                     min="0"
+                    value="0"                   
                 /></label>
                 <label class="utilities_label"
                   >Різниця, кВт:
                   <div>
                     <input
-                      class="input"
+                      class="input difference_input"
                       type="number"
                       id="electricity_difference"
+                      placeholder="0"
                       value="0"
                       min="0"
                       readonly
@@ -164,7 +174,7 @@
                   >До сплати, грн:
                   <div>
                     <input
-                      class="input"
+                      class="input to_pay__input"
                       type="number"
                       id="electricity_to_pay"
                       value="0"
@@ -181,30 +191,33 @@
                 <label class="utilities_label"
                   >Попередні, м<sup>3</sup>:
                   <input
-                    class="input"
+                    class="input indicator_input"
                     type="number"
                     id="previous_gas"
                     name="previous_gas"
                     placeholder="000000"
                     min="0"
+                    value="0"                   
                 /></label>
                 <label class="utilities_label"
                   >Поточні, м<sup>3</sup>:
                   <input
-                    class="input"
+                    class="input indicator_input"
                     type="number"
                     id="current_gas"
                     name="current_gas"
                     placeholder="000000"
                     min="0"
+                    value="0"                    
                 /></label>
                 <label class="utilities_label"
                   >Різниця, м<sup>3</sup>:
                   <div>
                     <input
-                      class="input"
+                      class="input difference_input"
                       type="number"
                       id="gas_difference"
+                      placeholder="0"
                       value="0"
                       min="0"
                       readonly
@@ -214,7 +227,7 @@
                   >До сплати, грн:
                   <div>
                     <input
-                      class="input"
+                      class="input to_pay__input"
                       type="number"
                       id="gas_to_pay"
                       value="0"
@@ -260,6 +273,6 @@
       </div>
     </div>
     <script src="./js/main.js"></script>
-    <script src="./js/calculation-page.js"></script>
+    <script src="./calculation-page2.js"></script>
   </body>
 </html>
