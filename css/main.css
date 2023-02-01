@@ -30,6 +30,7 @@
 }
 
 .login_button {
+  display: flex;
   width: 100px;
   height: 30px;
   border: none;
@@ -37,6 +38,8 @@
   color: #fff;
   background-color: #1859c9;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 
 .header_userbar_login_button:hover {

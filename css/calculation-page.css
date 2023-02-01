@@ -36,6 +36,11 @@
   background-color: #fff;
 }
 
+.utilities_label {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 :focus::placeholder {
   color: transparent;
 }
