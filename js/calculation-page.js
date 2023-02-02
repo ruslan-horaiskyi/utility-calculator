@@ -22,64 +22,66 @@ const previousGas = document.getElementById("previous_gas"),
   gasDifference = document.getElementById("gas_difference"),
   gasToPay = document.getElementById("gas_to_pay");
 
-// Total to paid and save calculation button
+// Total to pay and save calculation button
 const totalToPay = document.getElementById("total_to_pay"),
   saveCalculationButton = document.getElementById("save_calculation__button");
 
 // History of indicators
 const historyOfIndicators = document.querySelector(".history_of_indicators");
 
-const indicatorInputs = document.querySelectorAll(".indicator_input");
-const inputs = document.querySelectorAll(".input");
 
-const removeDefaultZero = (event) => {
-  event.target.value = event.target.value > 0 ? event.target.value : "";
-}
 
-for (const input of inputs) {
-  input.addEventListener("focus", removeDefaultZero);
-}
+// const indicatorInputs = document.querySelectorAll(".indicator_input");
+// const inputs = document.querySelectorAll(".input");
 
-for (let input of indicatorInputs) {
-  input.addEventListener("input", () => {
-    waterDifference.value = Math.abs(
-      parseInt(currentWater.value) - parseInt(previousWater.value)
-    );
+// const removeDefaultZero = (event) => {
+//   event.target.value = event.target.value > 0 ? event.target.value : "";
+// };
 
-    electricityDifference.value = Math.abs(
-      parseInt(currentElectricity.value) - parseInt(previousElectricity.value)
-    );
+// for (const input of inputs) {
+//   input.addEventListener("focus", removeDefaultZero);
+// }
 
-    gasDifference.value = Math.abs(
-      parseInt(currentGas.value) - parseInt(previousGas.value)
-    );
+// for (let input of indicatorInputs) {
+//   input.addEventListener("input", () => {
+//     waterDifference.value = Math.abs(
+//       parseInt(currentWater.value) - parseInt(previousWater.value)
+//     );
 
-    if (waterDifference.value >= 0 && waterCost.value > 0) {
-      waterToPay.value = parseFloat(
-        waterDifference.value * waterCost.value
-      ).toFixed(2);
-    }
-    if (electricityDifference.value >= 0 && electricityCost.value > 0) {
-      electricityToPay.value = parseFloat(
-        electricityDifference.value * electricityCost.value
-      ).toFixed(2);
-    }
-    if (gasDifference.value >= 0 && gasCost.value > 0) {
-      gasToPay.value = parseFloat(gasDifference.value * gasCost.value).toFixed(
-        2
-      );
-    }
+//     electricityDifference.value = Math.abs(
+//       parseInt(currentElectricity.value) - parseInt(previousElectricity.value)
+//     );
 
-    if (
-      waterToPay.value > 0 ||
-      electricityToPay.value > 0 ||
-      gasToPay.value > 0
-    ) {
-      totalToPay.value = parseFloat(
-        parseFloat(waterToPay.value) +
-          parseFloat(electricityToPay.value) +
-          parseFloat(gasToPay.value)
-      ).toFixed(2);
-    }
-  });
-}
+//     gasDifference.value = Math.abs(
+//       parseInt(currentGas.value) - parseInt(previousGas.value)
+//     );
+
+//     if (waterDifference.value >= 0 && waterCost.value > 0) {
+//       waterToPay.value = parseFloat(
+//         waterDifference.value * waterCost.value
+//       ).toFixed(2);
+//     }
+//     if (electricityDifference.value >= 0 && electricityCost.value > 0) {
+//       electricityToPay.value = parseFloat(
+//         electricityDifference.value * electricityCost.value
+//       ).toFixed(2);
+//     }
+//     if (gasDifference.value >= 0 && gasCost.value > 0) {
+//       gasToPay.value = parseFloat(gasDifference.value * gasCost.value).toFixed(
+//         2
+//       );
+//     }
+
+//     if (
+//       waterToPay.value > 0 ||
+//       electricityToPay.value > 0 ||
+//       gasToPay.value > 0
+//     ) {
+//       totalToPay.value = parseFloat(
+//         parseFloat(waterToPay.value) +
+//         parseFloat(electricityToPay.value) +
+//         parseFloat(gasToPay.value)
+//       ).toFixed(2);
+//     }
+//   });
+// }
