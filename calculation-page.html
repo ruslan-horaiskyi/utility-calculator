@@ -239,7 +239,7 @@
             </div>
 
             <div class="calculation_form__total_payment utilities">
-              <label class="utilities_label"
+              <label class="utilities_label" id="total_to_pay__label"
                 >Загалом до сплати, грн:
                 <div>
                   <input
@@ -251,8 +251,13 @@
                     readonly
                   /></div
               ></label>
-              <div id="save_calculation__button" class="button">
-                Зберегти розрахунки
+              <div id="calculate_buttons_block">
+                <div id="calculate_button" class="button">
+                  Розрахувати
+                </div>
+                <div id="save_calculation__button" class="button">
+                  Зберегти розрахунки
+                </div>
               </div>
             </div>
           </form>
