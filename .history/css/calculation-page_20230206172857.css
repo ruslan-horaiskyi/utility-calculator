@@ -74,25 +74,12 @@
   border-bottom: 1px #9ba0a8 solid;
 }
 
-#total_to_pay__label {
-  flex-grow: 3;
-}
-
-#calculate_buttons_block {
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-around;
-}
-
-.button {
+#save_calculation__button {
   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.25);
-  border-radius: 5px;
-  border: none;
-  padding: 3px 3px;
-  margin: 0 5px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+}
+
+#calculate_button {
+
 }
 
 .history_of_indicators {

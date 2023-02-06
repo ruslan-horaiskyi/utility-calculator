@@ -50,20 +50,6 @@ for (const input of inputs) {
   input.addEventListener("blur", emptyValueToZero);
 }
 
-const setIndicatorsDifference = () => {
-  waterDifference.value = Math.abs(
-    parseInt(currentWater.value) - parseInt(previousWater.value)
-  );
-
-  electricityDifference.value = Math.abs(
-    parseInt(currentElectricity.value) - parseInt(previousElectricity.value)
-  );
-
-  gasDifference.value = Math.abs(
-    parseInt(currentGas.value) - parseInt(previousGas.value)
-  );
-}
-
 const setIndicatorsToPay = () => {
   if (waterDifference.value >= 0 && waterCost.value > 0) {
     waterToPay.value = parseFloat(
@@ -79,6 +65,20 @@ const setIndicatorsToPay = () => {
     gasToPay.value = parseFloat(gasDifference.value * gasCost.value
     ).toFixed(2);
   }
+}
+
+const setIndicatorsDifference = () => {
+  waterDifference.value = Math.abs(
+    parseInt(currentWater.value) - parseInt(previousWater.value)
+  );
+
+  electricityDifference.value = Math.abs(
+    parseInt(currentElectricity.value) - parseInt(previousElectricity.value)
+  );
+
+  gasDifference.value = Math.abs(
+    parseInt(currentGas.value) - parseInt(previousGas.value)
+  );
 }
 
 for (let input of indicatorInputs) {

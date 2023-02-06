@@ -50,54 +50,42 @@ for (const input of inputs) {
   input.addEventListener("blur", emptyValueToZero);
 }
 
-const setIndicatorsDifference = () => {
-  waterDifference.value = Math.abs(
-    parseInt(currentWater.value) - parseInt(previousWater.value)
-  );
-
-  electricityDifference.value = Math.abs(
-    parseInt(currentElectricity.value) - parseInt(previousElectricity.value)
-  );
-
-  gasDifference.value = Math.abs(
-    parseInt(currentGas.value) - parseInt(previousGas.value)
-  );
-}
-
-const setIndicatorsToPay = () => {
-  if (waterDifference.value >= 0 && waterCost.value > 0) {
-    waterToPay.value = parseFloat(
-      waterDifference.value * waterCost.value
-    ).toFixed(2);
-  }
-  if (electricityDifference.value >= 0 && electricityCost.value > 0) {
-    electricityToPay.value = parseFloat(
-      electricityDifference.value * electricityCost.value
-    ).toFixed(2);
-  }
-  if (gasDifference.value >= 0 && gasCost.value > 0) {
-    gasToPay.value = parseFloat(gasDifference.value * gasCost.value
-    ).toFixed(2);
-  }
-}
-
 for (let input of indicatorInputs) {
   input.addEventListener("input", () => {
-    setIndicatorsDifference();
-    setIndicatorsToPay();
-  });
-}
+    waterDifference.value = Math.abs(
+      parseInt(currentWater.value) - parseInt(previousWater.value)
+    );
 
-for (let input of costInputs) {
-  input.addEventListener("input", setIndicatorsToPay);
+    electricityDifference.value = Math.abs(
+      parseInt(currentElectricity.value) - parseInt(previousElectricity.value)
+    );
+
+    gasDifference.value = Math.abs(
+      parseInt(currentGas.value) - parseInt(previousGas.value)
+    );
+
+    if (waterDifference.value >= 0 && waterCost.value > 0) {
+      waterToPay.value = parseFloat(
+        waterDifference.value * waterCost.value
+      ).toFixed(2);
+    }
+    if (electricityDifference.value >= 0 && electricityCost.value > 0) {
+      electricityToPay.value = parseFloat(
+        electricityDifference.value * electricityCost.value
+      ).toFixed(2);
+    }
+    if (gasDifference.value >= 0 && gasCost.value > 0) {
+      gasToPay.value = parseFloat(gasDifference.value * gasCost.value
+      ).toFixed(2);
+    }
+  });
 }
 
 const setTotalToPay = () => {
   totalToPay.value = parseFloat(
     parseFloat(waterToPay.value) +
       parseFloat(electricityToPay.value) +
-      parseFloat(gasToPay.value) +
-      parseFloat(gasDelivery.value)
+      parseFloat(gasToPay.value)
   ).toFixed(2);
 };
 
