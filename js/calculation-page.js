@@ -29,10 +29,18 @@ const totalToPay = document.getElementById("total_to_pay"),
 // History of indicators
 const historyOfIndicators = document.querySelector(".history_of_indicators");
 
+const indicatorInputs = document.querySelectorAll(".indicator_input");
+const inputs = document.querySelectorAll(".input");
+
+const removeDefaultZero = ({ target: { value } }) => {
+  value = value > 0 ? value : "";
+};
+
+for (const input of inputs) {
+  input.addEventListener("focus", removeDefaultZero);
+}
 
 
-// const indicatorInputs = document.querySelectorAll(".indicator_input");
-// const inputs = document.querySelectorAll(".input");
 
 // const removeDefaultZero = (event) => {
 //   event.target.value = event.target.value > 0 ? event.target.value : "";
