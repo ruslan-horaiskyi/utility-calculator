@@ -25,7 +25,8 @@ const previousGas = document.getElementById("previous_gas"),
 // Total to pay and save calculation button
 const totalToPay = document.getElementById("total_to_pay"),
   saveCalculationButton = document.getElementById("save_calculation__button"),
-  calculateButton = document.getElementById("calculate_button");
+  calculateButton = document.getElementById("calculate_button"),
+  calculationDate = document.getElementById("calculation_date");
 
 // History of indicators
 const historyOfIndicators = document.querySelector(".history_of_indicators");
@@ -102,3 +103,5 @@ const setTotalToPay = () => {
 };
 
 calculateButton.addEventListener("click", setTotalToPay);
+
+calculationDate.valueAsDate = new Date();
