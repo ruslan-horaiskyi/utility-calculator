@@ -1,5 +1,6 @@
 const calculationForm = document.getElementById("calculation_form");
 const TIMEOUT_DELAY = 10 * 60 * 1000;
+const TO_PAY_INPUTS = document.querySelectorAll(".to_pay__input");
 // Utilities price
 const waterCost = document.getElementById("water_cost"),
   electricityCost = document.getElementById("electricity_cost"),
@@ -82,12 +83,12 @@ const setIndicatorsToPay = () => {
     waterToPay.value = parseFloat(
       waterDifference.value * waterCost.value
     ).toFixed(2);
-  } 
+  }
   if (electricityDifference.value >= 0 && currentElectricity.value > 0) {
     electricityToPay.value = parseFloat(
       electricityDifference.value * electricityCost.value
     ).toFixed(2);
-  } 
+  }
   if (gasDifference.value >= 0 && currentGas.value > 0) {
     gasToPay.value = parseFloat(gasDifference.value * gasCost.value).toFixed(2);
   }
@@ -98,20 +99,23 @@ for (let input of [...costInputs, ...indicatorInputs]) {
 }
 
 const setTotalToPay = () => {
-  if (waterToPay.value > 0 || electricityToPay.value > 0 || gasToPay.value > 0)
-  totalToPay.value = parseFloat(
-    parseFloat(waterToPay.value) +
-      parseFloat(electricityToPay.value) +
-      parseFloat(gasToPay.value) +
-      parseFloat(gasDelivery.value)
-  ).toFixed(2);
+  for (const input of TO_PAY_INPUTS) {
+    if (input.value > 0) {
+      totalToPay.value = parseFloat(
+        parseFloat(waterToPay.value) +
+          parseFloat(electricityToPay.value) +
+          parseFloat(gasToPay.value) +
+          parseFloat(gasDelivery.value)
+      ).toFixed(2);
+    }
+  }
 };
 
 calculateButton.addEventListener("click", setTotalToPay);
 
 calculationDate.valueAsDate = new Date();
 
-// Timeout 
+// Timeout
 const resetTimeout = () => {
   clearTimeout(timeout);
   timeout = setTimeout(afkFunction, TIMEOUT_DELAY);
@@ -145,5 +149,3 @@ const afkFunction = () => {
 };
 
 let timeout = setTimeout(afkFunction, TIMEOUT_DELAY);
-
-
