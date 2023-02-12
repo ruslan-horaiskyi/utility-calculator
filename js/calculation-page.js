@@ -1,3 +1,5 @@
+const calculationForm = document.getElementById("calculation_form");
+const TIMEOUT_DELAY = 10 * 60 * 1000;
 // Utilities price
 const waterCost = document.getElementById("water_cost"),
   electricityCost = document.getElementById("electricity_cost"),
@@ -35,19 +37,25 @@ const indicatorInputs = document.querySelectorAll(".indicator_input");
 const inputs = document.querySelectorAll(".input");
 const costInputs = document.querySelectorAll(".cost_input");
 
+let indicatorsObject = {
+  waterCost: 0,
+  electricityCost: 0,
+  gasCost: 0,
+  water: 0,
+  electricity: 0,
+  gas: 0,
+};
+
 const removeDefaultZero = ({ target }) => {
   target.value = target.value > 0 ? target.value : "";
 };
-
-for (const input of inputs) {
-  input.addEventListener("focus", removeDefaultZero);
-}
 
 const emptyValueToZero = ({ target }) => {
   target.value = target.value > 0 ? target.value : (target.value = 0);
 };
 
 for (const input of inputs) {
+  input.addEventListener("focus", removeDefaultZero);
   input.addEventListener("blur", emptyValueToZero);
 }
 
@@ -63,37 +71,34 @@ const setIndicatorsDifference = () => {
   gasDifference.value = Math.abs(
     parseInt(currentGas.value) - parseInt(previousGas.value)
   );
+};
+
+for (let input of indicatorInputs) {
+  input.addEventListener("input", setIndicatorsDifference);
 }
 
 const setIndicatorsToPay = () => {
-  if (waterDifference.value >= 0 && waterCost.value > 0) {
+  if (waterDifference.value >= 0 && currentWater.value > 0) {
     waterToPay.value = parseFloat(
       waterDifference.value * waterCost.value
     ).toFixed(2);
-  }
-  if (electricityDifference.value >= 0 && electricityCost.value > 0) {
+  } 
+  if (electricityDifference.value >= 0 && currentElectricity.value > 0) {
     electricityToPay.value = parseFloat(
       electricityDifference.value * electricityCost.value
     ).toFixed(2);
+  } 
+  if (gasDifference.value >= 0 && currentGas.value > 0) {
+    gasToPay.value = parseFloat(gasDifference.value * gasCost.value).toFixed(2);
   }
-  if (gasDifference.value >= 0 && gasCost.value > 0) {
-    gasToPay.value = parseFloat(gasDifference.value * gasCost.value
-    ).toFixed(2);
-  }
-}
+};
 
-for (let input of indicatorInputs) {
-  input.addEventListener("input", () => {
-    setIndicatorsDifference();
-    setIndicatorsToPay();
-  });
-}
-
-for (let input of costInputs) {
+for (let input of [...costInputs, ...indicatorInputs]) {
   input.addEventListener("input", setIndicatorsToPay);
 }
 
 const setTotalToPay = () => {
+  if (waterToPay.value > 0 || electricityToPay.value > 0 || gasToPay.value > 0)
   totalToPay.value = parseFloat(
     parseFloat(waterToPay.value) +
       parseFloat(electricityToPay.value) +
@@ -105,3 +110,40 @@ const setTotalToPay = () => {
 calculateButton.addEventListener("click", setTotalToPay);
 
 calculationDate.valueAsDate = new Date();
+
+// Timeout 
+const resetTimeout = () => {
+  clearTimeout(timeout);
+  timeout = setTimeout(afkFunction, TIMEOUT_DELAY);
+};
+
+const compareDifference = (obj = {}) => {
+  return JSON.stringify(indicatorsObject) === JSON.stringify(obj);
+};
+
+const afkFunction = () => {
+  const tempObjToCompare = {
+    waterCost: waterCost.value,
+    electricityCost: electricityCost.value,
+    gasCost: gasCost.value,
+    water: waterDifference.value,
+    electricity: electricityDifference.value,
+    gas: gasDifference.value,
+  };
+
+  if (compareDifference(tempObjToCompare)) {
+    let confirmAction = confirm("Continue your calculation ?");
+
+    if (!confirmAction) {
+      calculationForm.reset();
+    }
+  } else {
+    resetTimeout();
+  }
+
+  indicatorsObject = { ...tempObjToCompare };
+};
+
+let timeout = setTimeout(afkFunction, TIMEOUT_DELAY);
+
+
