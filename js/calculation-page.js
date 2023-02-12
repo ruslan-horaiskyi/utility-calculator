@@ -1,6 +1,7 @@
 const calculationForm = document.getElementById("calculation_form");
 const TIMEOUT_DELAY = 10 * 60 * 1000;
 const TO_PAY_INPUTS = document.querySelectorAll(".to_pay__input");
+const LAST_VALUES = "LAST_VALUES";
 // Utilities price
 const waterCost = document.getElementById("water_cost"),
   electricityCost = document.getElementById("electricity_cost"),
@@ -193,7 +194,7 @@ saveCalculationButton.addEventListener("click", saveCalculationToHistory);
 const saveCurrentValues = () => {
   const currentValuesObject = getCalculationObject();
 
-  localStorage.setItem("last_Values", JSON.stringify(currentValuesObject));
+  localStorage.setItem([LAST_VALUES], JSON.stringify(currentValuesObject));
 };
 for (const input of inputs) {
   input.addEventListener("input", saveCurrentValues);
@@ -202,7 +203,7 @@ for (const input of inputs) {
 calculateButton.addEventListener("click", saveCurrentValues);
 
 const returnLastChanges = () => {
-  const tempObject = JSON.parse(localStorage.getItem("last_Values"));
+  const tempObject = JSON.parse(localStorage.getItem([LAST_VALUES]));
   for (const input of inputs) {
     input.value = tempObject[input.id];
     console.log(tempObject[input.id])
