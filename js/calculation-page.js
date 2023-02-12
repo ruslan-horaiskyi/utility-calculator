@@ -27,8 +27,9 @@ const previousGas = document.getElementById("previous_gas"),
 
 // Total to pay and save calculation button
 const totalToPay = document.getElementById("total_to_pay"),
-  saveCalculationButton = document.getElementById("save_calculation__button"),
   calculateButton = document.getElementById("calculate_button"),
+  comebackButton = document.getElementById("comeback_button"),
+  saveCalculationButton = document.getElementById("save_calculation__button"),
   calculationDate = document.getElementById("calculation_date");
 
 // History of indicators
@@ -38,13 +39,44 @@ const indicatorInputs = document.querySelectorAll(".indicator_input");
 const inputs = document.querySelectorAll(".input");
 const costInputs = document.querySelectorAll(".cost_input");
 
+const getCalculationObject = () => ({
+  water_cost: waterCost.value,
+  electricity_cost: electricityCost.value,
+  gas_cost: gasCost.value,
+  previous_water: previousWater.value,
+  current_water: currentWater.value,
+  water_difference: waterDifference.value,
+  water_to_pay: waterToPay.value,
+  previous_electricity: previousElectricity.value,
+  current_electricity: currentElectricity.value,
+  electricity_difference: electricityDifference.value,
+  electricity_to_pay: electricityToPay.value,
+  previous_gas: previousGas.value,
+  current_gas: currentGas.value,
+  gas_difference: gasDifference.value,
+  gas_to_pay: gasToPay.value,
+  total_to_pay: totalToPay.value,
+  calculation_date: calculationDate.value,
+});
+
 let indicatorsObject = {
-  waterCost: 0,
-  electricityCost: 0,
-  gasCost: 0,
-  water: 0,
-  electricity: 0,
-  gas: 0,
+  water_cost: 0,
+  electricity_cost: 0,
+  gas_cost: 0,
+  previous_water: 0,
+  current_water: 0,
+  water_difference: 0,
+  water_to_pay: 0,
+  previous_electricity: 0,
+  current_electricity: 0,
+  electricity_difference: 0,
+  electricity_to_pay: 0,
+  previous_gas: 0,
+  current_gas: 0,
+  gas_difference: 0,
+  gas_to_pay: 0,
+  total_to_pay: 0,
+  calculation_date: 0,
 };
 
 const removeDefaultZero = ({ target }) => {
@@ -126,14 +158,7 @@ const compareDifference = (obj = {}) => {
 };
 
 const afkFunction = () => {
-  const tempObjToCompare = {
-    waterCost: waterCost.value,
-    electricityCost: electricityCost.value,
-    gasCost: gasCost.value,
-    water: waterDifference.value,
-    electricity: electricityDifference.value,
-    gas: gasDifference.value,
-  };
+  const tempObjToCompare = getCalculationObject();
 
   if (compareDifference(tempObjToCompare)) {
     let confirmAction = confirm("Continue your calculation ?");
@@ -149,3 +174,42 @@ const afkFunction = () => {
 };
 
 let timeout = setTimeout(afkFunction, TIMEOUT_DELAY);
+
+// History of Indicators
+let historyId = 1;
+
+const saveCalculationToHistory = () => {
+  const calculationForSaveObject = getCalculationObject();
+
+  localStorage.setItem(
+    ["H_" + calculationDate.value + "_" + historyId],
+    JSON.stringify(calculationForSaveObject)
+  );
+  historyId++;
+};
+
+saveCalculationButton.addEventListener("click", saveCalculationToHistory);
+
+const saveCurrentValues = () => {
+  const currentValuesObject = getCalculationObject();
+
+  localStorage.setItem("last_Values", JSON.stringify(currentValuesObject));
+};
+for (const input of inputs) {
+  input.addEventListener("input", saveCurrentValues);
+}
+
+calculateButton.addEventListener("click", saveCurrentValues);
+
+const returnLastChanges = () => {
+  const tempObject = JSON.parse(localStorage.getItem("last_Values"));
+  for (const input of inputs) {
+    input.value = tempObject[input.id];
+    console.log(tempObject[input.id])
+    if (tempObject[input.id]) {
+      input.value = tempObject[input.id];
+    }
+  }
+};
+
+comebackButton.addEventListener("click", returnLastChanges);
