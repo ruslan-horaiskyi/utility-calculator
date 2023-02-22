@@ -186,6 +186,7 @@ const saveCalculationToHistory = () => {
     ["H_" + calculationDate.value + "_" + historyId],
     JSON.stringify(calculationForSaveObject)
   );
+
   historyId++;
 };
 
@@ -196,6 +197,7 @@ const saveCurrentValues = () => {
 
   localStorage.setItem([LAST_VALUES], JSON.stringify(currentValuesObject));
 };
+
 for (const input of inputs) {
   input.addEventListener("input", saveCurrentValues);
 }
@@ -206,7 +208,6 @@ const returnLastChanges = () => {
   const tempObject = JSON.parse(localStorage.getItem([LAST_VALUES]));
   for (const input of inputs) {
     input.value = tempObject[input.id];
-    console.log(tempObject[input.id])
     if (tempObject[input.id]) {
       input.value = tempObject[input.id];
     }
