@@ -1,28 +1,43 @@
+@media screen and (max-width: 980px) {
+  .wrapper__main_content {
+    flex-direction: column;
+
+  }
+
+  .history_of_indicators {
+    min-width: 980px;
+    max-height: 300px;
+  }
+
+  .calculation_area {
+    min-height: 100%;
+  }
+}
+
 .wrapper__main_content {
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
-  background-color: rgb(91, 157, 244);
+  background-color: #40414F;
 }
 
 .calculation_area {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   width: 100%;
-  max-width: 1024px;
-  background-color: #b0264b;
+  flex: 2;
+  height: 77vh;
 }
 
 .calculation_form {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 .costs_fieldset {
+  background-color: #464750;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,6 +52,7 @@
 }
 
 .utilities_label {
+  background-color: #464750;
   display: flex;
   flex-grow: 1;
   align-items: center;
@@ -51,6 +67,7 @@
 }
 
 .utilities_fieldset {
+  background-color: #464750;
   display: flex;
   align-items: center;
   width: 100%;
@@ -58,22 +75,27 @@
 }
 
 .calculation_form__costs {
+  background-color: #464750;
   border-bottom: 1px #9ba0a8 solid;
 }
 
 .calculation_form__water_indicators {
+  background-color: #464750;
   border-bottom: 1px #8ed9ec solid;
 }
 
 .calculation_form__electricity_indicators {
+  background-color: #464750;
   border-bottom: 1px #b66634 solid;
 }
 
 .calculation_form__gas_indicators {
+  background-color: #464750;
   border-bottom: 1px #3e4cea solid;
 }
 
 .calculation_form__total_payment {
+  background-color: #464750;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,6 +116,7 @@
 }
 
 .button {
+  background-color: #464750;
   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.25);
   border-radius: 5px;
   border: none;
@@ -105,11 +128,13 @@
 }
 
 .history_of_indicators {
+  background-color: #464750;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  max-height: 250px;
-  width: 100%;
+  overflow-y: scroll;
+  width: 300px;
+  flex: 1;
+  height: 77vh;
 }
 
 td {

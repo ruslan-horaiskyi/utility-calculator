@@ -1,10 +1,29 @@
+@media only screen and (max-width: 600px) {
+  .header_logo {
+    width: 50%;
+  }
+  
+  .header_userbar {
+    width: 50%;
+  }
+
+  .main_content__address_cards {
+    flex-direction: column;
+  }
+  .my_address__div,
+  .new_address__div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 .wrapper__main_content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
-  background-color: rgb(91, 157, 244);
+  background-color: #343541
 }
 
 .main_content__div {
@@ -32,7 +51,7 @@
   height: 200px;
   margin-right: 7px;
   border-radius: 7px;
-  background-color: yellow;
+  background-color: #464750;
 }
 
 .card_text {
@@ -54,7 +73,7 @@
   height: 200px;
   margin-left: 7px;
   border-radius: 7px;
-  background-color: yellow;
+  background-color: #464750;
 }
 
 .new_address__img {
@@ -70,5 +89,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: yellow;
+  background-color: #464750;
+  color: #fff;
 }
+

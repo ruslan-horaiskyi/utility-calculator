@@ -1,83 +1,83 @@
 const calculationForm = document.getElementById("calculation_form");
-const TIMEOUT_DELAY = 10 * 60 * 1000;
-const TO_PAY_INPUTS = document.querySelectorAll(".to_pay__input");
-const LAST_VALUES = "LAST_VALUES";
+const TIMEOUT_DELAY   = 10 * 60 * 1000;
+const TO_PAY_INPUTS   = document.querySelectorAll(".to_pay__input");
+const LAST_VALUES     = "LAST_VALUES";
 // Utilities price
-const waterCost = document.getElementById("water_cost"),
+const waterCost   = document.getElementById("water_cost"),
   electricityCost = document.getElementById("electricity_cost"),
-  gasCost = document.getElementById("gas_cost"),
-  gasDelivery = document.getElementById("gas_delivery");
+  gasCost         = document.getElementById("gas_cost"),
+  gasDelivery     = document.getElementById("gas_delivery");
 
 // Water indicators
 const previousWater = document.getElementById("previous_water"),
-  currentWater = document.getElementById("current_water"),
-  waterDifference = document.getElementById("water_difference"),
-  waterToPay = document.getElementById("water_to_pay");
+  currentWater      = document.getElementById("current_water"),
+  waterDifference   = document.getElementById("water_difference"),
+  waterToPay        = document.getElementById("water_to_pay");
 
 // Electricity indicators
 const previousElectricity = document.getElementById("previous_electricity"),
-  currentElectricity = document.getElementById("current_electricity"),
-  electricityDifference = document.getElementById("electricity_difference"),
-  electricityToPay = document.getElementById("electricity_to_pay");
+  currentElectricity      = document.getElementById("current_electricity"),
+  electricityDifference   = document.getElementById("electricity_difference"),
+  electricityToPay        = document.getElementById("electricity_to_pay");
 
 // Gas indicators
 const previousGas = document.getElementById("previous_gas"),
-  currentGas = document.getElementById("current_gas"),
-  gasDifference = document.getElementById("gas_difference"),
-  gasToPay = document.getElementById("gas_to_pay");
+  currentGas      = document.getElementById("current_gas"),
+  gasDifference   = document.getElementById("gas_difference"),
+  gasToPay        = document.getElementById("gas_to_pay");
 
 // Total to pay and save calculation button
-const totalToPay = document.getElementById("total_to_pay"),
-  calculateButton = document.getElementById("calculate_button"),
-  comebackButton = document.getElementById("comeback_button"),
+const totalToPay        = document.getElementById("total_to_pay"),
+  calculateButton       = document.getElementById("calculate_button"),
+  comebackButton        = document.getElementById("comeback_button"),
   saveCalculationButton = document.getElementById("save_calculation__button"),
-  calculationDate = document.getElementById("calculation_date");
+  calculationDate       = document.getElementById("calculation_date");
 
 // History of indicators
 const historyOfIndicators = document.querySelector(".history_of_indicators");
 
 const indicatorInputs = document.querySelectorAll(".indicator_input");
-const inputs = document.querySelectorAll(".input");
-const costInputs = document.querySelectorAll(".cost_input");
+const inputs          = document.querySelectorAll(".input");
+const costInputs      = document.querySelectorAll(".cost_input");
 
 const getCalculationObject = () => ({
-  water_cost: waterCost.value,
-  electricity_cost: electricityCost.value,
-  gas_cost: gasCost.value,
-  previous_water: previousWater.value,
-  current_water: currentWater.value,
-  water_difference: waterDifference.value,
-  water_to_pay: waterToPay.value,
-  previous_electricity: previousElectricity.value,
-  current_electricity: currentElectricity.value,
+  water_cost            : waterCost.value,
+  electricity_cost      : electricityCost.value,
+  gas_cost              : gasCost.value,
+  previous_water        : previousWater.value,
+  current_water         : currentWater.value,
+  water_difference      : waterDifference.value,
+  water_to_pay          : waterToPay.value,
+  previous_electricity  : previousElectricity.value,
+  current_electricity   : currentElectricity.value,
   electricity_difference: electricityDifference.value,
-  electricity_to_pay: electricityToPay.value,
-  previous_gas: previousGas.value,
-  current_gas: currentGas.value,
-  gas_difference: gasDifference.value,
-  gas_to_pay: gasToPay.value,
-  total_to_pay: totalToPay.value,
-  calculation_date: calculationDate.value,
+  electricity_to_pay    : electricityToPay.value,
+  previous_gas          : previousGas.value,
+  current_gas           : currentGas.value,
+  gas_difference        : gasDifference.value,
+  gas_to_pay            : gasToPay.value,
+  total_to_pay          : totalToPay.value,
+  calculation_date      : calculationDate.value,
 });
 
 let indicatorsObject = {
-  water_cost: 0,
-  electricity_cost: 0,
-  gas_cost: 0,
-  previous_water: 0,
-  current_water: 0,
-  water_difference: 0,
-  water_to_pay: 0,
-  previous_electricity: 0,
-  current_electricity: 0,
+  water_cost            : 0,
+  electricity_cost      : 0,
+  gas_cost              : 0,
+  previous_water        : 0,
+  current_water         : 0,
+  water_difference      : 0,
+  water_to_pay          : 0,
+  previous_electricity  : 0,
+  current_electricity   : 0,
   electricity_difference: 0,
-  electricity_to_pay: 0,
-  previous_gas: 0,
-  current_gas: 0,
-  gas_difference: 0,
-  gas_to_pay: 0,
-  total_to_pay: 0,
-  calculation_date: 0,
+  electricity_to_pay    : 0,
+  previous_gas          : 0,
+  current_gas           : 0,
+  gas_difference        : 0,
+  gas_to_pay            : 0,
+  total_to_pay          : 0,
+  calculation_date      : 0,
 };
 
 const removeDefaultZero = ({ target }) => {
