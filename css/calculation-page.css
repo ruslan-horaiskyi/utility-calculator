@@ -1,61 +1,89 @@
-@media screen and (max-width: 980px) {
-  .wrapper__main_content {
+/* @media screen and (max-width: 980px) {
+  .main_content {
     flex-direction: column;
 
   }
 
   .history_of_indicators {
-    min-width: 980px;
+    min-width: 100%;
     max-height: 300px;
   }
 
   .calculation_area {
     min-height: 100%;
   }
-}
 
-.wrapper__main_content {
+  .utilities_conteiner {
+    flex-direction: column;
+  }
+
+  .utilities_fieldset {
+    flex-direction: column;
+    align-content: flex-start;
+  }
+} */
+
+.main_content {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  flex-grow: 1;
-  background-color: #40414F;
-}
-
-.calculation_area {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  flex: 2;
-  height: 77vh;
+  gap: 1rem;
+  margin: 0 1rem;
 }
 
 .calculation_form {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  flex: 2;
+  gap: 1rem;
 }
 
 .costs_fieldset {
-  background-color: #464750;
+  background-color: #bae8e8;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+  align-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: .5rem;
+  padding: .5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.utilities {
+.additional_services_fieldset {
+  background-color: #bae8e8;
   display: flex;
-  flex-grow: 1;
-  background-color: #fff;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: .5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.utilities_conteiner {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  /* flex-grow: 1; */
+}
+
+.utilities_fieldset {
+  background-color: #bae8e8;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 1rem;
+  padding: .5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .utilities_label {
-  background-color: #464750;
   display: flex;
-  flex-grow: 1;
   align-items: center;
+  flex-grow: 1;
 }
 
 /* .input {
@@ -66,57 +94,19 @@
   color: transparent;
 }
 
-.utilities_fieldset {
-  background-color: #464750;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.calculation_form__costs {
-  background-color: #464750;
-  border-bottom: 1px #9ba0a8 solid;
-}
-
-.calculation_form__water_indicators {
-  background-color: #464750;
-  border-bottom: 1px #8ed9ec solid;
-}
-
-.calculation_form__electricity_indicators {
-  background-color: #464750;
-  border-bottom: 1px #b66634 solid;
-}
-
-.calculation_form__gas_indicators {
-  background-color: #464750;
-  border-bottom: 1px #3e4cea solid;
-}
-
-.calculation_form__total_payment {
-  background-color: #464750;
+.total_payment {
+  background-color: #bae8e8;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px #9ba0a8 solid;
-}
-
-#total_to_pay__label {
-  flex-grow: 1;
-  flex-wrap: wrap;
-}
-
-#calculate_buttons_block {
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  padding: .5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .button {
-  background-color: #464750;
+  background-color: #e6e7f7;
   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.25);
   border-radius: 5px;
   border: none;
@@ -128,15 +118,15 @@
 }
 
 .history_of_indicators {
-  background-color: #464750;
+  background-color: #bfbfdf;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  width: 300px;
   flex: 1;
-  height: 77vh;
+  max-height: 720px;
+  border-radius: 10px;
 }
 
 td {
-  border: #000000 solid 1px;
+  border: #2c2450 solid 1px;
 }

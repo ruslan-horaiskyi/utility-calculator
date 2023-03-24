@@ -1,95 +1,99 @@
-@media only screen and (max-width: 600px) {
-  .header_logo {
+@media only screen and (max-width: 720px) {
+  /* .header_logo {
     width: 50%;
   }
   
   .header_userbar {
     width: 50%;
-  }
+  } */
 
-  .main_content__address_cards {
+  .address_cards {
     flex-direction: column;
   }
   .my_address__div,
   .new_address__div {
     width: 100%;
-    margin-bottom: 10px;
   }
 }
 
-.wrapper__main_content {
+.main_content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex-grow: 1;
-  background-color: #343541
-}
-
-.main_content__div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
   margin: 0 auto;
   width: 100%;
   max-width: 1024px;
+  background-color: #bae8e8;
+  border-radius: 10px;
 }
 
-.main_content__address_cards {
+.address_cards {
   display: flex;
   align-items: center;
+  gap: 1rem 1rem;
+  padding: 1rem;
 }
 
-.my_address__div {
+.my_address_card {
   width: 100%;
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 200px;
-  margin-right: 7px;
-  border-radius: 7px;
-  background-color: #464750;
+  border-radius: 10px;
+  background-color: #66bfbf;
+
+  box-shadow: 0 0 0 2px #bae8e8;
 }
 
 .card_text {
-  margin-top: 15px;
+  padding-top: 15px;
 }
 
-.house_img {
-  margin-bottom: 45px;
-  border-radius: 10px;
-}
-
-.new_address__div {
+.new_address_card {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  flex-grow: 1;
   height: 200px;
-  margin-left: 7px;
-  border-radius: 7px;
-  background-color: #464750;
+  border-radius: 10px;
+  background-color: #66bfbf;
+
+  box-shadow: 0 0 0 2px #bae8e8;
 }
 
-.new_address__img {
+.new_address_img,
+.house_img {
   margin-bottom: 45px;
   border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.calculate_card__button {
-  margin-top: 15px;
-  height: 50px;
-  width: 100%;
-  border-radius: 7px;
+.calculate_card {
+  margin: 1rem 1rem;
+  height: 3rem;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #464750;
-  color: #fff;
+  background-color: #66bfbf;
+
+  box-shadow: 0 0 0 2px #bae8e8;
 }
+
+.calculate_card:hover,
+.my_address_card:hover,
+.new_address_card:hover {
+  background-color: #e3f6f5;
+  /* box-shadow: 0 0 0 2px #66bfbf; */
+  box-shadow: 1px 2px 4px rgba(102, 191, 191, 1);
+}
+
+.calculate_card,
+.new_address_card,
+.my_address_card,
+.main_content {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+} 
 

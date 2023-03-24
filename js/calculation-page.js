@@ -1,6 +1,6 @@
 const calculationForm = document.getElementById("calculation_form");
 const TIMEOUT_DELAY   = 10 * 60 * 1000;
-const TO_PAY_INPUTS   = document.querySelectorAll(".to_pay__input");
+const TO_PAY_INPUTS   = document.querySelectorAll(".to_pay_input");
 const LAST_VALUES     = "LAST_VALUES";
 // Utilities price
 const waterCost   = document.getElementById("water_cost"),
@@ -30,7 +30,7 @@ const previousGas = document.getElementById("previous_gas"),
 const totalToPay        = document.getElementById("total_to_pay"),
   calculateButton       = document.getElementById("calculate_button"),
   comebackButton        = document.getElementById("comeback_button"),
-  saveCalculationButton = document.getElementById("save_calculation__button"),
+  saveCalculationButton = document.getElementById("save_calculation_button"),
   calculationDate       = document.getElementById("calculation_date");
 
 // History of indicators
