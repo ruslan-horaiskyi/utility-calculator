@@ -1,27 +1,80 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: system-ui, -apple-system, Roboto;
+  color: #272343;
+}
+
+html, body {
+  overscroll-behavior-y: none;
+  caret-color: transparent;
+}
+
+.input {
+  font-size: 16px;
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  background-color: #66bfbf;
+  border-radius: 4px;
+  height: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input:focus {
+  background-color: #eaf6f6;
+  outline: none;
+  box-shadow: 1px 2px 4px rgba(102, 191, 191, 1);
+}
+
+.label_span {
+  width: max-content;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #272343;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  justify-content: center;
+  min-height: 100svh;
+  width: 100%;
+  background-color: #66bfbf;
 }
 
-.wrapper_header {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
+
+/* .wrapper_header {
   display: flex;
   height: 100px;
   background-color: green;
-}
+} */
 
-.header_logo {
+/* .header_logo {
   width: max-content;
   background-color: aqua;
 }
 
 .header_userbar {
-  background-color: rgb(68, 0, 255);
+  background-color: #202123;
   flex: 1;
   display: flex;
   justify-content: flex-end;
@@ -36,7 +89,7 @@
   border: none;
   border-radius: 5px;
   color: #fff;
-  background-color: #1859c9;
+  background-color: #464750;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -44,9 +97,9 @@
 
 .header_userbar_login_button:hover {
   background-color: #1859c9db;
-}
+} */
 
-.wrapper_footer {
+/* .wrapper_footer {
   display: flex;
   height: 100px;
   flex: 0 0 auto;
@@ -55,9 +108,12 @@
 }
 
 .footer_contacts {
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  align-items: center;
   height: 100px;
-  background-color: rgb(208, 43, 43);
+  background-color: #202123;
 }
 
 .footer_social {
@@ -67,11 +123,14 @@
   align-items: center;
   justify-content: space-between;
   height: 100px;
-  background-color: rgb(222, 134, 134);
+  background-color: #202123;
 }
 
 .footer_feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
   height: 100px;
-  background-color: rgb(237, 181, 181);
-}
+  background-color: #202123;
+} */

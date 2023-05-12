@@ -1,91 +1,132 @@
-.wrapper__main_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex-grow: 1;
-  background-color: rgb(91, 157, 244);
-}
+/* @media screen and (max-width: 980px) {
+  .main_content {
+    flex-direction: column;
 
-.calculation_area {
+  }
+
+  .history_of_indicators {
+    min-width: 100%;
+    max-height: 300px;
+  }
+
+  .calculation_area {
+    min-height: 100%;
+  }
+
+  .utilities_conteiner {
+    flex-direction: column;
+  }
+
+  .utilities_fieldset {
+    flex-direction: column;
+    align-content: flex-start;
+  }
+} */
+
+.main_content {
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 100%;
-  max-width: 1024px;
-  background-color: #b0264b;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 1rem;
 }
 
 .calculation_form {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 2;
+  gap: 1rem;
 }
 
 .costs_fieldset {
+  background-color: #bae8e8;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: .5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.utilities {
+.additional_services_fieldset {
+  background-color: #bae8e8;
   display: flex;
-  align-items: stretch;
-  flex-grow: 1;
-  background-color: #fff;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: .5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.utilities_conteiner {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  /* flex-grow: 1; */
+}
+
+.utilities_fieldset {
+  background-color: #bae8e8;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 1rem;
+  padding: .5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .utilities_label {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 1;
 }
+
+/* .input {
+  width: auto;
+} */
 
 :focus::placeholder {
   color: transparent;
 }
 
-.utilities_fieldset {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.calculation_form__costs {
-  border-bottom: 1px #9ba0a8 solid;
-}
-
-.calculation_form__water_indicators {
-  border-bottom: 1px #8ed9ec solid;
-}
-
-.calculation_form__electricity_indicators {
-  border-bottom: 1px #b66634 solid;
-}
-
-.calculation_form__gas_indicators {
-  border-bottom: 1px #3e4cea solid;
-}
-
-.calculation_form__total_payment {
+.total_payment {
+  background-color: #bae8e8;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px #9ba0a8 solid;
+  flex-wrap: wrap;
+  padding: .5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-#save_calculation__button {
+.button {
+  background-color: #e6e7f7;
   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.25);
   border-radius: 5px;
   border: none;
-  margin-right: 10px;
+  padding: 3px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .history_of_indicators {
+  background-color: #bfbfdf;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  overflow-y: auto;
-  max-height: 250px;
-  width: 100%;
+  overflow-y: scroll;
+  flex: 1;
+  max-height: 720px;
+  border-radius: 10px;
+}
+
+td {
+  border: #2c2450 solid 1px;
 }
